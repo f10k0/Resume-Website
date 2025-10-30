@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - Коршиков Руслан</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="vis.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Коршиков Руслан</a>
+            
+            <div class="d-flex align-items-center">
+                <div class="theme-switcher me-3">
+                    <button class="btn btn-sm" id="themeToggle">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="projects.html">
+                            <i class="bi bi-folder me-1"></i>Проекты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diary.html">
+                            <i class="bi bi-journal-text me-1"></i>Дневник
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-envelope me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center mb-4">Мои проекты</h1>
+        
+        <div class="d-flex justify-content-center mb-4">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-primary active" data-filter="all">Все проекты</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="unreal">Unreal Engine</button>
+                <button type="button" class="btn btn-outline-primary" data-filter="web">Веб-проекты</button>
+            </div>
+        </div>
+
+        <div class="row" id="projects-grid">
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="unreal">
+                <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#marsoidModal">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="bi bi-planet"></i>
+                        </div>
+                        <h5 class="card-title">Marsoid</h5>
+                        <p class="card-text">Survival игра на Марсе с системой крафта</p>
+                        <div class="tech-tags">
+                            <span class="badge bg-unreal">Unreal Engine</span>
+                            <span class="badge bg-cpp">C++</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="unreal">
+                <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#migameModal">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="bi bi-person-running"></i>
+                        </div>
+                        <h5 class="card-title">MiGame</h5>
+                        <p class="card-text">Компьютерный платформер с уникальной механикой</p>
+                        <div class="tech-tags">
+                            <span class="badge bg-unreal">Unreal Engine</span>
+                            <span class="badge bg-cpp">C++</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="unreal">
+                <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#skelecastleModal">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="bi bi-shield-fill"></i>
+                        </div>
+                        <h5 class="card-title">SkeleCastle</h5>
+                        <p class="card-text">RPG в подземелье со скелетами и системой прокачки</p>
+                        <div class="tech-tags">
+                            <span class="badge bg-unreal">Unreal Engine</span>
+                            <span class="badge bg-cpp">C++</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="unreal">
+                <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#cosmoballModal">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="bi bi-globe-americas"></i>
+                        </div>
+                        <h5 class="card-title">Cosmoball</h5>
+                        <p class="card-text">Космический футбол с физикой невесомости</p>
+                        <div class="tech-tags">
+                            <span class="badge bg-unreal">Unreal Engine</span>
+                            <span class="badge bg-cpp">C++</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="unreal">
+                <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#earlrunModal">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="bi bi-speedometer2"></i>
+                        </div>
+                        <h5 class="card-title">Earl Run</h5>
+                        <p class="card-text">Динамичный раннер с процедурной генерацией</p>
+                        <div class="tech-tags">
+                            <span class="badge bg-unreal">Unreal Engine</span>
+                            <span class="badge bg-cpp">C++</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web">
+                <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#websiteModal">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="bi bi-code-square"></i>
+                        </div>
+                        <h5 class="card-title">Личный сайт</h5>
+                        <p class="card-text">Адаптивное портфолио с системой смены тем</p>
+                        <div class="tech-tags">
+                            <span class="badge bg-html">HTML5</span>
+                            <span class="badge bg-css">CSS3</span>
+                            <span class="badge bg-js">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 mb-4 project-item" data-category="web">
+                <div class="card h-100 project-card" data-bs-toggle="modal" data-bs-target="#webappModal">
+                    <div class="card-body text-center">
+                        <div class="card-icon">
+                            <i class="bi bi-kanban"></i>
+                        </div>
+                        <h5 class="card-title">Task Manager</h5>
+                        <p class="card-text">Веб-приложение для управления задачами</p>
+                        <div class="tech-tags">
+                            <span class="badge bg-js">JavaScript</span>
+                            <span class="badge bg-bootstrap">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal fade" id="marsoidModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Marsoid - Survival на Марсе</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Жанр:</strong> Survival, Приключение</p>
+                    <p>Survival игра, где игрок оказывается на Марсе и должен выживать в суровых условиях красной планеты. Собирайте ресурсы, стройте базу, исследуйте марсианские ландшафты и находите артефакты древней цивилизации.</p>
+                    
+                    <h6>Основные особенности:</h6>
+                    <ul>
+                        <li>Система крафта и строительства баз</li>
+                        <li>Динамическая погода и песчаные бури</li>
+                        <li>Система голода, жажды и кислорода</li>
+                        <li>Исследование пещер и каньонов Марса</li>
+                        <li>Враги - марсианские формы жизни</li>
+                    </ul>
+                    
+                    <div class="screenshots">
+                        <h6>Скриншоты:</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <img src="marsoid1.jpg" alt="Marsoid - Исследование поверхности" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Исследование поверхности Марса</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <img src="3.png" alt="Marsoid - База игрока" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">База игрока с системами жизнеобеспечения</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://github.com/f10k0/marsoid" target="_blank" class="btn btn-primary me-2">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">Скачать демо</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="migameModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">MiGame - Компьютерный платформер</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Жанр:</strong> Платформер, Приключение</p>
+                    <p>Динамичный платформер с уникальной механикой изменения гравитации. Игрок управляет персонажем, который может менять направление гравитации, чтобы преодолевать препятствия и решать головоломки.</p>
+                    
+                    <h6>Основные особенности:</h6>
+                    <ul>
+                        <li>Механика изменения гравитации в реальном времени</li>
+                        <li>50+ уровней с возрастающей сложностью</li>
+                        <li>Система сбора коллекционных предметов</li>
+                        <li>Разнообразные враги и боссы</li>
+                        <li>Система достижений и рекордов</li>
+                    </ul>
+                    
+                    <div class="screenshots">
+                        <h6>Скриншоты:</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <img src="migame1.jpg" alt="MiGame - Геймплей" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Геймплей с изменением гравитации</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <img src="Снимок_2.PNG" alt="MiGame - Уровень с боссом" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Босс-битва в одном из уровней</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://github.com/f10k0/migame" target="_blank" class="btn btn-primary me-2">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">Играть онлайн</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="skelecastleModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">SkeleCastle - RPG в подземелье</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Жанр:</strong> RPG, Подземелье, Приключение</p>
+                    <p>Классическая RPG в стиле данжен-кроулер, где игрок исследует многоуровневый замок, наполненный скелетами и другими нежитью. Сражайтесь, находите сокровища и прокачивайте своего персонажа.</p>
+                    
+                    <h6>Основные особенности:</h6>
+                    <ul>
+                        <li>Глубокое древо навыков и характеристик</li>
+                        <li>Система крафта и улучшения снаряжения</li>
+                        <li>5 уникальных классов персонажей</li>
+                        <li>Поколение процедурных подземелий</li>
+                        <li>Система квестов и NPC</li>
+                    </ul>
+                    
+                    <div class="screenshots">
+                        <h6>Скриншоты:</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <img src="skel1.png" alt="SkeleCastle - Битва со скелетами" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Битва с армией скелетов</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <img src="skel2.png" alt="SkeleCastle - Инвентарь" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Система инвентаря и крафта</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://github.com/f10k0/skelecastle" target="_blank" class="btn btn-primary me-2">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">Steam Page</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="cosmoballModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cosmoball - Космический футбол</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Жанр:</strong> Спортивный, Аркада</p>
+                    <p>Футбол в условиях невесомости на космических аренах. Уникальная физика мяча, специальные способности игроков и динамичный геймплей.</p>
+                    
+                    <h6>Основные особенности:</h6>
+                    <ul>
+                        <li>Реалистичная физика невесомости</li>
+                        <li>8 уникальных космических арен</li>
+                        <li>Мультиплеер до 4 игроков</li>
+                        <li>Система специальных способностей</li>
+                        <li>Турнирный режим и рейтинговая система</li>
+                    </ul>
+                    
+                    <div class="screenshots">
+                        <h6>Скриншоты:</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <img src="cosmo1.png" alt="Cosmoball - Геймплей" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Матч на космической арене</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <img src="cosmo2.png" alt="Cosmoball - Выбор команды" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Выбор команды и настройки</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://github.com/f10k0/cosmoball" target="_blank" class="btn btn-primary me-2">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">Скачать игру</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="earlrunModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Earl Run - Динамичный раннер</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Жанр:</strong> Раннер, Аркада</p>
+                    <p>Бесконечный раннер с процедурной генерацией уровней. Игрок управляет персонажем Эрлом, который должен бежать как можно дальше, уворачиваясь от препятствий и собирая бонусы.</p>
+                    
+                    <h6>Основные особенности:</h6>
+                    <ul>
+                        <li>Процедурная генерация уровней</li>
+                        <li>3 игровых персонажа с уникальными способностями</li>
+                        <li>Система power-up'ов и бонусов</li>
+                        <li>Глобальная таблица рекордов</li>
+                        <li>Ежедневные задания и награды</li>
+                    </ul>
+                    
+                    <div class="screenshots">
+                        <h6>Скриншоты:</h6>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <img src="e1.png" alt="Earl Run - Геймплей" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Основной геймплей</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <img src="e2.jpg" alt="Earl Run - Персонажи" class="img-fluid rounded screenshot">
+                                <p class="text-muted text-center mt-1">Выбор персонажа</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <a href="https://github.com/f10k0/earlrun" target="_blank" class="btn btn-primary me-2">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">Google Play</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="websiteModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Личный сайт-портфолио</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Технологии:</strong> HTML5, CSS3, JavaScript, Bootstrap 5</p>
+                    <p>Адаптивный веб-сайт с современным дизайном и системой смены тем. Включает портфолио проектов, блог и контактную форму.</p>
+                    
+                    <h6>Основные особенности:</h6>
+                    <ul>
+                        <li>Адаптивный дизайн для всех устройств</li>
+                        <li>Система светлой/темной темы</li>
+                        <li>Интерактивное портфолио с фильтрацией</li>
+                        <li>Валидация форм на JavaScript</li>
+                        <li>Оптимизация производительности</li>
+                    </ul>
+                    
+                    <div class="mt-4">
+                        <a href="https://github.com/f10k0" target="_blank" class="btn btn-primary me-2">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                        <a href="index.html" class="btn btn-outline-primary">Открыть сайт</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="webappModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Task Manager - Веб-приложение</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Технологии:</strong> JavaScript, Bootstrap, LocalStorage API</p>
+                    <p>Веб-приложение для управления задачами с возможностью создания, редактирования, удаления и категоризации задач. Данные сохраняются в локальном хранилище браузера.</p>
+                    
+                    <h6>Основные особенности:</h6>
+                    <ul>
+                        <li>CRUD операции с задачами</li>
+                        <li>Система категорий и тегов</li>
+                        <li>Фильтрация и поиск задач</li>
+                        <li>Визуализация прогресса</li>
+                        <li>Экспорт данных в JSON</li>
+                    </ul>
+                    
+                    <div class="mt-4">
+                        <a href="https://github.com/f10k0/task-manager" target="_blank" class="btn btn-primary me-2">
+                            <i class="bi bi-github me-1"></i>Исходный код
+                        </a>
+                        <a href="#" class="btn btn-outline-primary">Открыть приложение</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2025 Коршиков Руслан. Все права защищены.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <div class="social-links">
+                        <a href="https://github.com/f10k0" target="_blank" class="me-3"><i class="bi bi-github"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="contacts.html"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>

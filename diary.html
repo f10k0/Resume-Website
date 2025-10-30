@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дневник - Коршиков Руслан</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="vis.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Коршиков Руслан</a>
+            
+            <div class="d-flex align-items-center">
+                <div class="theme-switcher me-3">
+                    <button class="btn btn-sm" id="themeToggle">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            <i class="bi bi-folder me-1"></i>Проекты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="diary.html">
+                            <i class="bi bi-journal-text me-1"></i>Дневник
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-envelope me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-5 pt-5">
+        <h1 class="text-center mb-4 section-title">Мой учебный прогресс</h1>
+        
+        <div class="row">
+            <div class="col-12 col-lg-8">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Записи обучения</h5>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span class="entry-text">5 окт - Верстка макета сайта</span>
+                                <span class="badge bg-success">✓ Завершено</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span class="entry-text">6 окт - JavaScript основы</span>
+                                <span class="badge bg-success">✓ Завершено</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span class="entry-text">7 окт - Работа с формами</span>
+                                <span class="badge bg-warning">🔄 В процессе</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span class="entry-text">30 окт - Адаптивный дизайн</span>
+                                <span class="badge bg-warning">🔄 В процессе</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span class="entry-text">30 окт - Bootstrap компоненты</span>
+                                <span class="badge bg-success">✓ Завершено</span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <span class="entry-text">1 ноя - CSS Grid и Flexbox</span>
+                                <span class="badge bg-success">✓ Завершено</span>
+                            </li>
+                        </ul>
+                        <button class="btn btn-primary mt-3 w-100-mobile" id="addEntryBtn">
+                            <i class="bi bi-plus-circle me-2"></i>Добавить запись
+                        </button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Статистика обучения</h5>
+                        <div class="row text-center">
+                            <div class="col-4 col-md-4 mb-3">
+                                <div class="stat-item">
+                                    <div class="stat-value text-primary">~</div>
+                                    <div class="stat-label">Часов изучено</div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-4 mb-3">
+                                <div class="stat-item">
+                                    <div class="stat-value text-success">13</div>
+                                    <div class="stat-label">Задач выполнено</div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-4 mb-3">
+                                <div class="stat-item">
+                                    <div class="stat-value text-warning">7</div>
+                                    <div class="stat-label">Проектов создано</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Ближайшие цели</h5>
+                        <div class="goals-list">
+                            <div class="goal-item">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <span class="goal-text">Изучить React Hooks</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="bi bi-check-circle text-success me-2"></i>
+                                <span class="goal-text">Создать SPA приложение</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="bi bi-circle me-2"></i>
+                                <span class="goal-text">Освоить Redux</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="bi bi-circle me-2"></i>
+                                <span class="goal-text">Изучить TypeScript</span>
+                            </div>
+                            <div class="goal-item">
+                                <i class="bi bi-circle me-2"></i>
+                                <span class="goal-text">Создать fullstack проект</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Достижения</h5>
+                        <div class="achievements-list">
+                            <div class="achievement-item">
+                                <i class="bi bi-trophy-fill text-warning me-2"></i>
+                                <span class="achievement-text">Завершил курс HTML/CSS</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="bi bi-trophy-fill text-warning me-2"></i>
+                                <span class="achievement-text">Создал 5 проектов</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="bi bi-star-fill text-info me-2"></i>
+                                <span class="achievement-text">Изучил Bootstrap 5</span>
+                            </div>
+                            <div class="achievement-item">
+                                <i class="bi bi-star-fill text-info me-2"></i>
+                                <span class="achievement-text">Освоил JavaScript основы</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="my-5 py-5">
+            <h2 class="text-center mb-5 section-title">График прогресса</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div class="progress-chart">
+                        <div class="chart-bar">
+                            <div class="chart-label-mobile">
+                                <span class="chart-name">HTML/CSS</span>
+                                <span class="chart-percent-mobile">95%</span>
+                            </div>
+                            <div class="chart-progress-container">
+                                <div class="chart-progress">
+                                    <div class="chart-fill" style="width: 95%"></div>
+                                </div>
+                                <div class="chart-percent-desktop">95%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="chart-label-mobile">
+                                <span class="chart-name">JavaScript</span>
+                                <span class="chart-percent-mobile">80%</span>
+                            </div>
+                            <div class="chart-progress-container">
+                                <div class="chart-progress">
+                                    <div class="chart-fill" style="width: 80%"></div>
+                                </div>
+                                <div class="chart-percent-desktop">80%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="chart-label-mobile">
+                                <span class="chart-name">React</span>
+                                <span class="chart-percent-mobile">60%</span>
+                            </div>
+                            <div class="chart-progress-container">
+                                <div class="chart-progress">
+                                    <div class="chart-fill" style="width: 60%"></div>
+                                </div>
+                                <div class="chart-percent-desktop">60%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="chart-label-mobile">
+                                <span class="chart-name">Node.js</span>
+                                <span class="chart-percent-mobile">40%</span>
+                            </div>
+                            <div class="chart-progress-container">
+                                <div class="chart-progress">
+                                    <div class="chart-fill" style="width: 40%"></div>
+                                </div>
+                                <div class="chart-percent-desktop">40%</div>
+                            </div>
+                        </div>
+                        <div class="chart-bar">
+                            <div class="chart-label-mobile">
+                                <span class="chart-name">Базы данных</span>
+                                <span class="chart-percent-mobile">35%</span>
+                            </div>
+                            <div class="chart-progress-container">
+                                <div class="chart-progress">
+                                    <div class="chart-fill" style="width: 35%"></div>
+                                </div>
+                                <div class="chart-percent-desktop">35%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-5 py-5">
+            <h2 class="text-center mb-5 section-title">Еженедельная активность</h2>
+            <div class="card">
+                <div class="card-body">
+                    <div class="activity-calendar">
+                        <div class="activity-week">
+                            <div class="activity-day active">
+                                <span class="day-short">Пн</span>
+                                <span class="day-full">Понедельник</span>
+                            </div>
+                            <div class="activity-day active">
+                                <span class="day-short">Вт</span>
+                                <span class="day-full">Вторник</span>
+                            </div>
+                            <div class="activity-day active">
+                                <span class="day-short">Ср</span>
+                                <span class="day-full">Среда</span>
+                            </div>
+                            <div class="activity-day">
+                                <span class="day-short">Чт</span>
+                                <span class="day-full">Четверг</span>
+                            </div>
+                            <div class="activity-day active">
+                                <span class="day-short">Пт</span>
+                                <span class="day-full">Пятница</span>
+                            </div>
+                            <div class="activity-day">
+                                <span class="day-short">Сб</span>
+                                <span class="day-full">Суббота</span>
+                            </div>
+                            <div class="activity-day active">
+                                <span class="day-short">Вс</span>
+                                <span class="day-full">Воскресенье</span>
+                            </div>
+                        </div>
+                        <div class="activity-stats mt-3">
+                            <div class="activity-stat">
+                                <span class="stat-number">4-6</span>
+                                <span class="stat-label">дней обучения на этой неделе</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2025 Коршиков Руслан. Все права защищены.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <div class="social-links">
+                        <a href="https://github.com/f10k0" target="_blank" class="me-3"><i class="bi bi-github"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="contacts.html"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>
