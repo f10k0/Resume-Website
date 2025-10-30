@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Коршиков Руслан - Фуллстек Разработчик</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="vis.css">
+</head>
+<body>
+    <div class="animated-bg"></div>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Коршиков Руслан</a>
+            
+            <div class="d-flex align-items-center">
+                <div class="theme-switcher me-3">
+                    <button class="btn btn-sm" id="themeToggle">
+                        <i class="bi bi-sun-fill"></i>
+                    </button>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="bi bi-house me-1"></i>Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            <i class="bi bi-folder me-1"></i>Проекты
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diary.html">
+                            <i class="bi bi-journal-text me-1"></i>Дневник
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">
+                            <i class="bi bi-envelope me-1"></i>Контакты
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mt-4 pt-4">
+        <section class="hero-section">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 col-md-6 order-2 order-md-1">
+                    <div class="hero-content text-center text-md-start">
+                        <h1 class="hero-title gradient-text animate-typing">Фуллстек разработчик</h1>
+                        <p class="hero-subtitle text-fade-in">РТУ МИРЭА</p>
+                        <p class="hero-description text-fade-in">Создаю современные веб-приложения и игры с использованием передовых технологий</p>
+                        <div class="hero-buttons button-group">
+                            <a href="assets/resume.pdf" class="btn btn-primary btn-lg pulse" download>
+                                <i class="bi bi-download me-2"></i>Скачать резюме
+                            </a>
+                            <a href="https://github.com/f10k0" target="_blank" class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-github me-2"></i>Мой GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+                    <div class="profile-section text-center">
+                        <div class="profile-image-container">
+                            <img src="avatar.jpg" alt="Коршиков Руслан" class="profile-image">
+                            <div class="profile-badge">
+                                <i class="bi bi-code-slash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="my-5 py-4">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-4 section-title">Мои навыки</h2>
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Unreal Engine</span>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar progress-unreal" role="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C++</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar progress-cpp" role="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar progress-python" role="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">C#</span>
+                                <span class="skill-percent">70%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar progress-csharp" role="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar progress-js" role="progressbar"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                            <div class="progress skill-progress">
+                                <div class="progress-bar progress-html" role="progressbar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="my-5 py-4">
+            <h2 class="text-center mb-4 section-title">Лучшие проекты</h2>
+            <div class="row justify-content-center">
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-icon">
+                            <i class="bi bi-planet"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Marsoid</h5>
+                            <p class="card-text">Survival игра на Марсе с системой крафта</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-unreal">Unreal Engine</span>
+                                <span class="badge bg-cpp">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-icon">
+                            <i class="bi bi-person-running"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">MiGame</h5>
+                            <p class="card-text">Компьютерный платформер с уникальной механикой</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-unreal">Unreal Engine</span>
+                                <span class="badge bg-cpp">C++</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-icon">
+                            <i class="bi bi-code-slash"></i>
+                        </div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Личный сайт</h5>
+                            <p class="card-text">Адаптивное портфолио с темной/светлой темой</p>
+                            <div class="tech-tags">
+                                <span class="badge bg-html">HTML/CSS</span>
+                                <span class="badge bg-js">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="projects.html" class="btn btn-outline-primary btn-lg">
+                    <i class="bi bi-arrow-right me-2"></i>Все проекты
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2025 Коршиков Руслан. Все права защищены.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <div class="social-links">
+                        <a href="https://github.com/f10k0" target="_blank" class="me-3"><i class="bi bi-github"></i></a>
+                        <a href="#" class="me-3"><i class="bi bi-telegram"></i></a>
+                        <a href="contacts.html"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="work.js"></script>
+</body>
+</html>
