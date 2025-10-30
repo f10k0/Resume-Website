@@ -1635,26 +1635,16 @@ footer::before {
     display: inline-block !important;
 }
 
-/* Фиксированный футер */
-html, body {
-    height: 100%;
-}
-
 body {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
 }
 
 main {
-    flex: 1 0 auto;
+    flex: 1;
 }
 
 footer {
-    flex-shrink: 0;
     margin-top: auto;
-}
-
-.py-4.mt-5 {
-    margin-top: auto !important;
 }
